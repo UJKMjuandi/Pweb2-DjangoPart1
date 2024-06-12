@@ -4,9 +4,9 @@ from django.db import models
 class Persona(models.Model):
     nombres = models.CharField(max_length= 100)
     apellidos = models.CharField(max_length= 100)
-    edad = models.IntegerField(max_digits = 3)#(max_d)
+    edad = models.IntegerField()
 
-INSTALLED_APPS = {
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -14,4 +14,4 @@ INSTALLED_APPS = {
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'personas',
-}
+]
