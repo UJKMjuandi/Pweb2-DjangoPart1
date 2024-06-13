@@ -4,10 +4,13 @@
     <title>Template Base</title>
 </head>
 <body>
-    <h1>Hola mundo desde Django</h1>
-    <h2>Con Template</h2>
+    {% extends 'base.html' %}
+    {% block content %}
+    <h2>Hola mundo desde Django</h2>
+    <h3>Con Template</h3>
     {{ request.user }}
     <br>
     {{ request.user.is_authenticated }}
+    {% endblock %}
 </body>
 </html>
