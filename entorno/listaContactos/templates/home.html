@@ -14,7 +14,22 @@
     </p>
     <ul>
         {% for myItem in myList %}
-            <li>{{forloop.counter}} - {{ myItem }}</li>
+            <li>{{forloop.last}} - {{ myItem }}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for myItem in myList %}
+            <li>{{forloop.counter0}} - {{ myItem }}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for myItem in myList %}
+            <li>{{forloop.revcounter}} - {{ myItem }}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for myItem in myList %}
+            <li>{{forloop.first}} - {{ myItem }}</li>
         {% endfor %}
     </ul>
     {% endblock %}
