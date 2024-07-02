@@ -14,22 +14,13 @@
     </p>
     <ul>
         {% for myItem in myList %}
-            <li>{{forloop.last}} - {{ myItem }}</li>
-        {% endfor %}
-    </ul>
-    <ul>
-        {% for myItem in myList %}
-            <li>{{forloop.counter0}} - {{ myItem }}</li>
-        {% endfor %}
-    </ul>
-    <ul>
-        {% for myItem in myList %}
-            <li>{{forloop.revcounter}} - {{ myItem }}</li>
-        {% endfor %}
-    </ul>
-    <ul>
-        {% for myItem in myList %}
-            <li>{{forloop.first}} - {{ myItem }}</li>
+            <li>{{forloop.counter}} - {{ myItem }}
+            {% if myItem == 33 %}
+                - Este número es mágico
+            {% elif myItem > 50 %}
+                -Este número es mayor que 50
+            {% endif %}
+            </li>
         {% endfor %}
     </ul>
     {% endblock %}
